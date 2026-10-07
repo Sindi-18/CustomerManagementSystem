@@ -1,0 +1,104 @@
+/* the main window*/
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color:cornflower blue;
+}
+
+/* ---------- Title and instructions ---------- */
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill:navy;
+}
+
+.how-to {
+    -fx-text-fill: #333333;
+    -fx-background-color: #e8f0fe;
+    -fx-background-radius: 6;
+    -fx-padding: 10;
+}
+
+/* ---------- Input controls ---------- */
+.text-field,
+.combo-box {
+    -fx-background-color: white;
+    -fx-background-radius: 4;
+    -fx-border-color: #c4cad4;
+    -fx-border-radius: 4;
+}
+
+.text-field:focused,
+.combo-box:focused {
+    -fx-border-color: #2563eb;          /* blue outline on the active field */
+}
+
+/* ---------- Buttons ---------- */
+.button {
+    -fx-background-radius: 5;
+    -fx-padding: 7 16 7 16;
+    -fx-cursor: hand;
+}
+
+/* Save = blue (main action) */
+.primary-button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.primary-button:hover   { -fx-background-color: #1d4ed8; }
+.primary-button:pressed { -fx-background-color: #1e40af; }
+
+/* Clear = light grey (safe, optional action) */
+.secondary-button {
+    -fx-background-color: #e5e7eb;
+    -fx-text-fill: #1f2937;
+}
+.secondary-button:hover { -fx-background-color: #d1d5db; }
+
+/* Delete = red (careful action) */
+.danger-button {
+    -fx-background-color: #dc2626;
+    -fx-text-fill: white;
+}
+.danger-button:hover   { -fx-background-color: #b91c1c; }
+.danger-button:pressed { -fx-background-color: #991b1b; }
+
+/* Greyed-out look when a button cannot be used (e.g. no row selected) */
+.button:disabled {
+    -fx-opacity: 0.45;
+    -fx-cursor: default;
+}
+
+/* ---------- Table ---------- */
+.table-view {
+    -fx-background-radius: 6;
+    -fx-border-color: #c4cad4;
+    -fx-border-radius: 6;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #dbe4f0;
+}
+
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f3a5f;
+}
+
+/* Selected row = light blue so the user sees what Delete will remove */
+.table-row-cell:selected {
+    -fx-background-color: #bfdbfe;
+}
+.table-row-cell:selected .text {
+    -fx-fill: #1f3a5f;
+}
+
+/* ---------- Status bar (bottom) ---------- */
+.status-bar {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc transparent transparent transparent;
+}
+.status-success { -fx-text-fill: #15803d; }   /* green */
+.status-problem { -fx-text-fill: #b91c1c; }   /* red   */
+.status-info    { -fx-text-fill: #222222; }   /* black */
